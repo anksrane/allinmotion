@@ -1,0 +1,48 @@
+/* Path: src\styles\global.css */
+
+@font-face {
+  font-family: "Inter";
+  src: url("../assets/fonts/Inter-VariableFont.ttf") format("truetype");
+  font-weight: 100 900;   /* variable weight range */
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Inter";
+  src: url("../assets/fonts/Inter-Italic-VariableFont.ttf") format("truetype");
+  font-weight: 100 900;
+  font-style: italic;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  overflow-x: hidden;
+}
+
+.img-fluid {
+    max-width: 100%;
+    height: auto;
+}
+
+.w-full{
+  width: 100%;
+}
+
+.container{
+  width: 100%;
+  max-width: 1440px;
+  margin: auto;
+  padding: 0 15px;
+}
+
+a{
+  text-decoration: none;
+}

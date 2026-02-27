@@ -1,0 +1,14 @@
+/* Path: src\components\ui\SideLink\SideLink.module.css */
+
+.sideLink {
+  font-size: 14px;
+  text-decoration: none;
+  color: var(--text--tertiary);
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.icon {
+  font-size: 12px;
+}

@@ -1,0 +1,135 @@
+/* Path: src\components\layout\Header\Header.module.css */
+
+.headerOuterContainer{
+    background-color: var(--primary);
+    position: relative;
+}
+.headerInnerContainer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    position: relative;
+    z-index: 9999;    
+}
+.menuButton{
+    background-color: transparent;
+    border: 0;
+    color: var(--white);
+    font-size: 18px;
+    cursor: pointer;
+    padding: 10px 14px;
+    font-family: "Inter", sans-serif;
+}
+.menuButton span{
+    padding: 10px;
+}
+
+/* Nav Links CSS */
+.navItemsOuterContainer {
+    position: fixed;
+    top: 70px;
+    left: 0;
+    width: 100vw;
+    height: calc(100vh - 70px);
+    background-color: var(--primary);
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    transform: translateY(-100%);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.35s ease;
+    z-index: 999;
+}
+/* When menu is open */
+.navItemsOuterContainer.open {
+    transform: translateY(0);
+    opacity: 1;
+    visibility: visible;
+}
+.navItemsInnerContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    padding: 30px 15px;
+}
+.navItem{
+    position: relative;
+    color: var(--white);
+    font-weight: 500;
+    font-size: calc(30px + (60 - 30) * ((100vw - 320px) / (1440 - 320)));
+    padding: 1.5% 5%;
+    transition: 0.3s ease;
+}
+
+/* All corner pieces */
+.corner {
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    border-color: var(--white);
+    opacity: 0;
+    transition: 0.3s ease;
+}
+
+/* Top-left */
+.corner:nth-child(1) {
+    top: 0;
+    left: 0;
+    border-top: 2px solid;
+    border-left: 2px solid;
+}
+
+/* Top-right */
+.corner:nth-child(2) {
+    top: 0;
+    right: 0;
+    border-top: 2px solid;
+    border-right: 2px solid;
+}
+
+/* Bottom-left */
+.corner:nth-child(3) {
+    bottom: 0;
+    left: 0;
+    border-bottom: 2px solid;
+    border-left: 2px solid;
+}
+
+/* Bottom-right */
+.corner:nth-child(4) {
+    bottom: 0;
+    right: 0;
+    border-bottom: 2px solid;
+    border-right: 2px solid;
+}
+
+.navItem:hover .corner {
+    opacity: 1;
+}
+.navItem.active{
+    font-weight: 800;
+}
+
+@media (max-width: 640px) { 
+    .hideMob{
+        display: none !important;
+    }
+}
+
+@media (max-width: 320px) { 
+  .menuButton{
+      font-size: 14px;
+      padding: 10px;
+  }  
+    .menuButton span{
+        padding: 5px;
+    }  
+}

@@ -1,0 +1,109 @@
+/* Path: src\components\sections\Services\Services.module.css */
+
+.servicesSection {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  background: var(--white);
+  overflow: hidden;
+}
+.servicesContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 80px;
+}
+.headingRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.heading {
+  font-size: calc(48px + (110 - 48) * ((100vw - 320px) / (1440 - 320)));
+  font-weight: 400;
+  line-height: 0.8;
+  color: var(--text-dark);
+}
+.heading i{
+    margin-left: 15%;
+}
+.line {
+  display: inline-block;
+  opacity: 0;
+}
+.servicesLink {
+  font-size: 14px;
+  text-decoration: none;
+  color: var(--text-muted);
+}
+.contentRow {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 80px;
+}
+.servicesList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 18px 22px;
+  max-width: 620px;
+}
+.serviceItem {
+  font-size: 18px;
+  color: var(--text--tertiary);
+  font-weight: 500;
+  transition: color 0.25s ease;
+  z-index: 5;
+}
+.serviceItem:hover {
+  color: var(--text-dark);
+}
+.servicesListGroup{
+    position: relative;
+}
+.servicesListGroup:hover .previewCircle {
+  opacity: 1;
+  transform: scale(1);
+}
+.previewCircle {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  overflow: hidden;
+  flex-shrink: 0;
+  opacity: 0;
+  transform: scale(0.9);
+  transition: 0.3s ease;  
+  position: absolute;
+  z-index: 10;
+  top: -50px;
+}
+.previewCircle img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: opacity 0.35s ease, transform 0.35s ease;
+}
+.previewCircle img {
+  transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
+  .servicesSection{
+    min-height: auto;
+    padding: 40px 0;
+  }
+  .headingRow{
+    flex-direction: column;
+    gap: 15px;
+  }
+  .serviceSideLink{
+    margin-left: auto;
+  }
+  .servicesContainer{
+    gap: 50px;
+  }
+  .serviceItem{
+    font-size: 16px;
+  }
+}

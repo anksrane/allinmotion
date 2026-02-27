@@ -1,0 +1,76 @@
+/* Path: src\components\sections\Hero\Hero.module.css */
+
+.heroOuterContainer{
+    background-color: var(--primary);
+    min-height: 90vh;
+    display: flex;   
+    overflow: visible; 
+    perspective: 1000px;
+}
+.heroInnerContainer{
+    flex: 1;  
+    display: flex;
+}
+.heroGrid{
+    flex: 1;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-auto-rows: minmax(80px, auto);
+    align-items: center;
+    justify-items: center;
+    padding: 40px 0;
+    gap: 40px;
+}
+.heroHeading{
+    color: var(--text-white);
+    font-size: calc(36px + (110 - 36) * ((100vw - 320px) / (1440 - 320)));
+    font-weight: 500;
+    text-align: center;
+    line-height: 1;
+    will-change: transform;
+}
+.heroText {
+  color: var(--text-white);
+  font-size: 16px;
+  line-height: 1;
+  text-align: left;
+}
+
+.heroImageWrapper {
+  max-width: 140px;
+  max-height: 90px;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: visible;
+  z-index: 2;
+  border-radius: 2px;
+}
+
+.heroImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  will-change: transform;
+  transform-origin: center center;
+  position: relative;
+  z-index: 5;
+  backface-visibility: hidden;
+}
+
+.imageLandingZone {
+  max-width: 400px;
+  max-height: 250px;
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+  margin-top: 200px;
+  border-radius: 16px;
+  background: #111;
+}
+
+@media (max-width: 768px) { 
+  .heroGrid{
+      gap: 30px 10px;
+  }  
+}

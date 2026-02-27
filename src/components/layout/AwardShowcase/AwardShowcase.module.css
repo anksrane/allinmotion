@@ -1,0 +1,78 @@
+/* Path: src\components\layout\AwardShowcase\AwardShowcase.module.css */
+
+.showcaseWrapper {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr 1fr;
+  align-items: start;
+  width: 100%;
+}
+
+/* LEFT */
+.awardsList {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.awardButton {
+  background: none;
+  border: none;
+  text-align: left;
+  font-size: 16px;
+  color: var(--text--tertiary);
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.awardButton:hover {
+  color: var(--text--primary);
+}
+
+.active {
+  color: var(--text-dark);
+  font-weight: 500;
+}
+
+/* MIDDLE */
+.imageContainer {
+  display: flex;
+  justify-content: center;
+}
+
+.imageContainer img {
+  max-height: 380px;
+  object-fit: contain;
+  transition: opacity 0.3s ease;
+}
+
+/* RIGHT */
+.detailsContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 6px;
+}
+
+.detailsContainer h3 {
+  font-size: 20px;
+  font-size: calc(18px + (20 - 18) * ((100vw - 320px) / (1440 - 320)));
+  font-weight: 500;
+  color: var(--text-dark);
+  margin-left: auto;
+}
+
+.detailsContainer span {
+  font-size: 16px;
+  color: var(--text--tertiary);
+  margin-left: auto;
+}
+
+@media (max-width: 768px) {
+  .showcaseWrapper{
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+  .detailsContainer h3, .detailsContainer span {
+    margin-left: unset;
+  }
+}

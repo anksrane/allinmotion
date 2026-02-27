@@ -1,0 +1,28 @@
+/* Path: src\components\animations\ScrollAnimation\ScrollReactivePath.module.css */
+
+.container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.svg {
+  width: 100%;
+}
+
+.path {
+  fill: none;
+  stroke: var(--primary);
+  stroke-width: 10;
+  stroke-linecap: round;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .path {
+    stroke-width: 4;
+  }
+}

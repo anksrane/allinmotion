@@ -1,0 +1,29 @@
+/* Path: src\components\layout\ProjectsWrapper\ProjectsWrapper.module.css */
+
+.wrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.row {
+  display: grid;
+  gap: 15px;
+  align-items: stretch;
+  margin-bottom: 2%;
+}
+
+.rowNormal {
+  grid-template-columns: 0.7fr 1.3fr;
+}
+.rowReverse {
+  grid-template-columns: 1.3fr 0.7fr;
+}
+@media (max-width: 768px) {
+  .row,
+  .rowNormal,
+  .rowReverse {
+    grid-template-columns: 1fr;
+  }
+}

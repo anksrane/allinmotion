@@ -1,0 +1,87 @@
+/* Path: src\components\ui\NavButtonIcon\NavButton.module.css */
+
+.navButton {
+  display: inline-flex;
+  align-items: center;
+  border-radius: 999px;
+  text-decoration: none;
+}
+
+/* LIGHT VERSION (default)  */
+
+.light .text {
+  background: var(--white);
+  color: var(--text-dark);
+}
+
+.light .connector {
+  background: var(--white);
+}
+
+.light .iconWrapper {
+  background: var(--white);
+}
+
+.light .icon {
+  color: var(--text-dark);
+}
+
+/* COLORED VERSION          */
+
+.colored .text {
+  background: var(--primary);
+  color: var(--white);
+}
+
+.colored .connector {
+  background: var(--primary);
+}
+
+.colored .iconWrapper {
+  background: var(--primary);
+}
+
+.colored .icon {
+  color: var(--white);
+}
+
+/* SHARED STYLES            */
+
+.text {
+  padding: 10px 14px;
+  border-radius: 999px;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.connector {
+  width: 15px;
+  height: 15px;
+  border-radius: 8px;
+  margin: 0 -5px;
+  z-index: 1;
+  transition: transform 0.35s ease;
+}
+
+.iconWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 7px;
+  border-radius: 50%;
+  transition: transform 0.35s ease;
+}
+
+.icon {
+  width: 24px;
+  height: 24px;
+  stroke-width: 1;
+}
+
+.navButton:hover .connector {
+  transform: scale(0);
+}
+
+.navButton:hover .iconWrapper {
+  transform: rotate(45deg);
+}

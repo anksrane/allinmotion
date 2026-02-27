@@ -1,0 +1,86 @@
+/* Path: src\components\sections\ReadySection\ReadySection.module.css */
+
+.readySection {
+  width: 100%;
+  min-height: 60vh;
+  background: #0A5BFF; 
+  display: flex;
+  align-items: center;
+}
+
+.readyContainer {
+  position: relative;
+}
+
+.topRight {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.contentWrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.heading {
+  font-size: calc(30px + (104 - 30) * ((100vw - 320px) / (1440 - 320)));
+  font-weight: 400;
+  line-height: 1;
+  color: white;
+}
+
+.heading i {
+  font-style: italic;
+  font-weight: 400;
+  margin-left: 50%;
+}
+.heading span {
+  font-weight: 400;
+  margin-left: 50%;
+}
+
+.circleWrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.circleBtn {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  border: none;
+  background: white;
+  color: #0A5BFF;
+  font-size: 16px;
+  font-weight: 400;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.circleBtn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+@media (max-width: 768px) {
+  .readySection{
+    min-height: auto;
+    padding: 40px 0;
+  }
+  .contentWrapper{
+    gap: 15px;
+    flex-direction: column;
+    align-items: center;
+  }
+  .heading i{
+    margin-left: unset;
+  }
+  .heading span{
+    margin-left: unset;
+  }
+  .sideLinkContact{
+    margin-left: auto;
+  }
+}

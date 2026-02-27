@@ -1,0 +1,19 @@
+/* Path: src\components\sections\AnimationImageLayer\AnimationImageLayer.module.css */
+
+.AnimationImageLayer {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 998;
+}
+
+.floatingImage {
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  object-fit: cover;
+  will-change: transform, width, height;
+  transform-origin: top left;
+  backface-visibility: hidden;
+}

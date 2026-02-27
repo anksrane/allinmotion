@@ -1,0 +1,98 @@
+/* Path: src\components\sections\Clients\Clients.module.css */
+
+.clientsSection {
+  width: 100%;
+  min-height: 100vh;
+  background: var(--primary);
+  color: var(--white);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  overflow: hidden;
+}
+.clientsContainer {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+  position: relative;
+}
+.stat {
+  align-self: flex-end;   
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+}
+.statNumber {
+  font-size: calc(48px + (110 - 48) * ((100vw - 320px) / (1440 - 320)));
+  font-weight: 500;
+}
+.statLabel {
+  font-size: 16px;
+  opacity: 0.8;
+}
+.heading {
+  align-self: center;     
+  font-size: calc(48px + (110 - 48) * ((100vw - 320px) / (1440 - 320)));
+  font-weight: 400;
+  line-height: 1.15;
+  text-align: center;
+}
+.line {
+  display: inline-block;
+  opacity: 0;
+  overflow: hidden;
+}
+.clientsLink {
+  font-size: 16px;
+  opacity: 0.8;
+  text-decoration: none;
+  color: var(--text--tertiary);
+  width: fit-content;
+  display: flex;
+  justify-self: end;
+  align-items: flex-start;
+  gap: 5px; 
+}
+
+/* Carousel Styling */
+.carouselWrapper {
+  width: 100%;
+  margin-top: 40px;
+  padding-bottom: 40px;
+}
+/* Swiper Slide Fix */
+.slide {
+  width: auto !important;
+}
+/* Logo Card */
+.logoCard {
+  background: var(--white);
+  border-radius: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease;
+}
+.logoCard:hover {
+  transform: translateY(-6px);
+}
+.logoCard img {
+  opacity: 0.5;
+}
+.slide {
+  min-width: 200px !important;
+}
+:global(.swiper-wrapper) {
+  transition-timing-function: linear !important;
+}
+
+@media (max-width: 768px) {
+  .clientsSection{
+    min-height: auto;
+    padding: 30px 0 30px 0;
+  }
+  .clientsContainer{
+    grid-template-columns: auto;
+    justify-items: center;
+  }
+}

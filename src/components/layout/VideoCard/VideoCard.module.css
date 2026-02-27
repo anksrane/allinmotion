@@ -1,0 +1,131 @@
+/* Path: src\components\layout\VideoCard\VideoCard.module.css */
+
+.card {
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+}
+
+.imageWrapper {
+  position: relative;
+  overflow: hidden;
+  height: 100%;
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.35);
+  opacity: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.3s ease;
+}
+
+.playButton {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  border: none;
+  background: white;
+  font-size: 28px;
+  cursor: pointer;
+  transform: scale(0.8);
+  transition: transform 0.3s ease;
+}
+
+.imageWrapper:hover .overlay {
+  opacity: 1;
+}
+
+.imageWrapper:hover .playButton {
+  transform: scale(1);
+}
+
+.imageWrapper:hover .image {
+  transform: scale(1.05);
+}
+
+.textContent {
+  display: block;
+  margin-top: 12px;
+  padding-bottom: 20px;
+}
+.tags {
+  position: absolute;
+  left: 1%;
+  bottom: 1%;
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+.tag {
+  display: inline-block;
+  font-size: 12px;
+  padding: 6px 12px;
+  border-radius: 999px;
+  background: #f3f3f3;
+  white-space: nowrap;
+}
+
+.title {
+  font-size: 18px;
+  margin: 0;
+}
+
+/* Lightbox */
+.lightbox {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+}
+
+.lightboxContent {
+  position: relative;
+  width: 90%;
+  max-width: 900px;
+  background: black;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.lightboxContent iframe {
+  width: 100%;
+  height: 500px;
+}
+
+.close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: white;
+  border: none;
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+@media (max-width: 768px) {
+  .imageWrapper{
+    height: auto;
+  }
+  .textContent{
+    margin-top: 5px;
+    padding-bottom: 10px;
+  }
+}

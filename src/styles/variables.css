@@ -1,0 +1,13 @@
+/* Path: src\styles\variables.css */
+
+:root {
+  --primary: #1c5bff;
+  --tertiary: #b0b0b0;
+
+  --text-white: #ffffff;
+  --text-dark: #282828;
+  --text--tertiary: #b0b0b0;
+
+  --white: #fff;
+  --black: #000;
+}

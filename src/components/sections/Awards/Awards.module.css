@@ -1,0 +1,65 @@
+/* Path: src\components\sections\Awards\Awards.module.css */
+
+.awardsSection {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  background: var(--white);
+  overflow: hidden;
+}
+.awardsContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 80px;
+}
+.headingRow {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-start;
+  gap: 8%;
+}
+.headingInnerContainer{
+    display: flex;
+    align-items: flex-end;
+}
+.heading {
+  font-size: calc(48px + (110 - 48) * ((100vw - 320px) / (1440 - 320)));
+  font-weight: 400;
+  line-height: 0.8;
+  color: var(--text-dark);
+}
+.heading span{
+    margin-left: 15%;
+}
+.mask {
+  display: block;
+  padding: 0.15em 0;
+}
+
+.line {
+  display: inline-block;
+  opacity: 0;
+}
+@media (max-width: 768px) {
+  .awardsSection{
+    min-height: auto;
+    padding: 40px 0;
+  }
+  .awardsContainer{
+    gap: 30px;
+  }
+  .headingRow {
+    flex-direction: column;
+    gap: 15px;
+  }
+  .heading{
+    line-height: 0.9;
+  }
+  .heading span{
+    margin-left: 0%;
+  }
+  .sideLinkAwards{
+    margin-left: auto;
+  }
+}

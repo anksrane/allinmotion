@@ -1,0 +1,54 @@
+/* Path: src\components\sections\Projects\Projects.module.css */
+.projectsSection {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  background: var(--white);
+}
+.projectsContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 80px;
+  padding-bottom: 5%;
+}
+.headingRow {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-start;
+  gap: 8%;
+}
+.headingInnerContainer{
+    display: flex;
+    align-items: flex-end;
+    gap: 30px;
+}
+.heading {
+  font-size: calc(48px + (110 - 48) * ((100vw - 320px) / (1440 - 320)));
+  font-weight: 400;
+  line-height: 0.8;
+  color: var(--text-dark);
+  text-align: end;
+}
+.smallText{
+  font-size: 16px;
+  opacity: 0.8;
+  height: fit-content;
+}
+
+@media (max-width: 768px) {
+  .projectsSection {
+    min-height: auto;
+    padding: 40px 0;
+  }
+  .projectsContainer{
+    gap: 30px;
+  }
+  .headingRow{
+    flex-direction: column;
+    gap: 15px;
+  }
+  .sideLinkProjects{
+    margin-left: auto;
+  }
+}
