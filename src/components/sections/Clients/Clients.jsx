@@ -45,6 +45,7 @@ function Clients() {
       }
     })
 
+    // Bringing (from left)
     tl.fromTo(
       line1Ref.current,
       {
@@ -58,6 +59,8 @@ function Clients() {
         ease: "power3.out"
       }
     )
+
+    // Visions (from right)
     .fromTo(
       line2Ref.current,
       {
@@ -70,9 +73,10 @@ function Clients() {
         duration: 1,
         ease: "power3.out"
       },
-      "-=0.4" 
+      "-=0.4" // overlap for smooth stagger
     )
 
+    // to Life (from left)
     .fromTo(
       line3Ref.current,
       {
@@ -110,6 +114,7 @@ function Clients() {
         <SideLink to="/clients" className={styles.clientsLink}>clients</SideLink>
       </div>
 
+      {/* Carousel */}
       <div className={styles.carouselWrapper}>
         <Swiper
             modules={[Autoplay, FreeMode]}

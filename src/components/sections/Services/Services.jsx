@@ -43,6 +43,7 @@ export default function Services() {
       }
     });
 
+    // Elevate your (from left)
     tl.fromTo(
       line1Ref.current,
       {
@@ -57,6 +58,7 @@ export default function Services() {
       }
     )
 
+    // Storytelling (from right)
     .fromTo(
       line2Ref.current,
       {
@@ -69,7 +71,7 @@ export default function Services() {
         duration: 1,
         ease: "power3.out"
       },
-      "-=0.4"
+      "-=0.4" // slight overlap for smooth stagger
     );
 
   }, { scope: sectionRef });

@@ -25,6 +25,7 @@ function Projects() {
       }
     })
 
+    // Empowering (from left)
     tl.fromTo(
       line1Ref.current,
       {
@@ -39,6 +40,7 @@ function Projects() {
       }
     )
 
+    // imagery (from right)
     .fromTo(
       line2Ref.current,
       {
@@ -54,6 +56,7 @@ function Projects() {
       "-=0.5"
     )
 
+    // 120+ (from right, slight delay)
     .fromTo(
       countRef.current,
       {
@@ -75,6 +78,7 @@ function Projects() {
     <section ref={sectionRef} className={styles.projectsSection}>
       <div className={`container ${styles.projectsContainer}`}>
 
+        {/* ✅ Heading Row */}
         <div className={styles.headingRow}>
             <div className={styles.headingInnerContainer}>
               <h1 className={styles.heading}>

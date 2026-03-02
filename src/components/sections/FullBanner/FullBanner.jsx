@@ -7,6 +7,7 @@ const FullBanner = forwardRef((props, ref) => {
   return (
     <section ref={ref} className={styles.fullBannerOuterContainer}>
       <div className={styles.fullBannerInner}>
+        {/* Optional future content */}
       </div>
     </section>
   );

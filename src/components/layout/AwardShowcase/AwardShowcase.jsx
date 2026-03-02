@@ -7,6 +7,7 @@ function AwardShowcase({ awards, activeAward, onSelect }) {
   return (
     <div className={styles.showcaseWrapper}>
 
+      {/* LEFT → Award List */}
       <div className={styles.awardsList}>
         {awards.map((award) => (
           <button
@@ -21,10 +22,12 @@ function AwardShowcase({ awards, activeAward, onSelect }) {
         ))}
       </div>
 
+      {/* MIDDLE → Image */}
       <div className={styles.imageContainer}>
         <img src={activeAward.image} alt={activeAward.title} className={`img-fluid ${activeAward.image}`} />
       </div>
 
+      {/* RIGHT → Details */}
       <div className={styles.detailsContainer}>
         <h3>{activeAward.category}</h3>
         <span>{activeAward.year}</span>

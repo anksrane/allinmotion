@@ -19,12 +19,14 @@ function ScrollReactivePath() {
 
     const pageHeight = document.body.scrollHeight;
 
+    // Match SVG height to full page dynamically
     gsap.set(svg, {
       height: pageHeight,
     });
 
     const length = path.getTotalLength();
 
+    // Show only small part (snake body length)
     const snakeLength = 400;
 
     gsap.set(path, {

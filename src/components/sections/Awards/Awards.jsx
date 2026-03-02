@@ -53,6 +53,7 @@ function Awards() {
       }
     })
 
+    // Championing (from left)
     tl.fromTo(
       line1Ref.current,
       {
@@ -67,6 +68,7 @@ function Awards() {
       }
     )
 
+    // Achievements (from right)
     .fromTo(
       line2Ref.current,
       {
@@ -79,7 +81,7 @@ function Awards() {
         duration: 1,
         ease: "power3.out"
       },
-      "-=0.5" 
+      "-=0.5" // overlap for smooth stagger
     )
 
   }, { scope: sectionRef })  
@@ -88,6 +90,7 @@ function Awards() {
     <section ref={sectionRef} className={styles.awardsSection}>
       <div className={`container ${styles.awardsContainer}`}>
 
+        {/* ✅ Heading Row */}
         <div className={styles.headingRow}>
             <div className={styles.headingInnerContainer}>
               <h1 className={styles.heading}>
@@ -110,6 +113,7 @@ function Awards() {
             <SideLink className={styles.sideLinkAwards} to="/awards">awards</SideLink>              
         </div>
         
+        {/* ✅ Showcase */}
         <AwardShowcase
           awards={awardsData}
           activeAward={activeAward}

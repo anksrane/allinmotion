@@ -12,18 +12,21 @@
   position: relative;
 }
 
+/* Top-right link */
 .topRight {
   position: absolute;
   top: 0;
   right: 0;
 }
 
+/* Layout */
 .contentWrapper {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
 }
 
+/* Heading */
 .heading {
   font-size: calc(30px + (104 - 30) * ((100vw - 320px) / (1440 - 320)));
   font-weight: 400;
@@ -41,6 +44,7 @@
   margin-left: 50%;
 }
 
+/* Circle Button */
 .circleWrapper {
   display: flex;
   justify-content: center;

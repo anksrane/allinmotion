@@ -27,7 +27,7 @@ function Hero({ imageSlotRef }) {
       const percentX = (x / rect.width - 0.5) * 2;
 
       gsap.to(headings, {
-        rotation: (i) => percentX * (20 + i * 0.2),  
+        rotation: (i) => percentX * (20 + i * 0.2),  // adjust strength here
         ease: "power2.out",
         duration: 0.4
       });

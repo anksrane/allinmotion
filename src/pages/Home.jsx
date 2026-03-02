@@ -28,7 +28,7 @@ function Home() {
 
     const heroRect = heroSlot.getBoundingClientRect();
 
-    // Initial placement
+    // ✅ Initial placement
     gsap.set(image, {
       position: "fixed",
       x: heroRect.left,
@@ -37,7 +37,7 @@ function Home() {
       height: heroRect.height,
     });
 
-    // Phase 1 + 2
+    // 🎬 Phase 1 + 2
     const tl = gsap.timeline({
       scrollTrigger: {
         trigger: banner,
@@ -62,7 +62,7 @@ function Home() {
       duration: 1.0
     });
 
-    // Phase 3 → FLIP Trigger
+    // 🎯 Phase 3 → FLIP Trigger
     ScrollTrigger.create({
       trigger: landing,
       start: "top 70%",
@@ -109,7 +109,7 @@ function Home() {
       });
     }
 
-  });
+  },[]);
 
   return (
     <>
